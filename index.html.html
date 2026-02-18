@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Cute Vidyamma 💖</title>
+
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            min-height: 100vh;
+            color: white;
+            padding-top: 100px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        #startBtn, #yes {
+            background-color: #ff4da6;
+            color: white;
+        }
+
+        #no {
+            background-color: #444;
+            color: white;
+            position: absolute;
+        }
+
+        #question {
+            margin-top: 40px;
+            font-size: 26px;
+        }
+
+        #photos {
+            margin-top: 40px;
+            display: none;
+        }
+
+        #photos img {
+            width: 220px;
+            margin: 10px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 0, 150, 0.6);
+            transition: transform 0.3s;
+        }
+
+        #photos img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello My Mudhu Amma 💖</h1>
+
+    <button id="startBtn" onclick="startSurprise()">Start Surprise 💝</button>
+
+    <div id="question"></div>
+    <div id="photos"></div>
+
+    <footer>Made with love by your mudhu kanda 💛</footer>
+
+    <script>
+        function startSurprise() {
+            document.getElementById("question").innerHTML =
+                "Amma... Do you love me? 🥺💖<br><br>" +
+                "<button id='yes' onclick='showLove()'>Yes 💕</button>" +
+                "<button id='no' onmouseover='moveNo()'>No 😜</button>";
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById("no");
+            const x = Math.random() * (window.innerWidth - 120);
+            const y = Math.random() * (window.innerHeight - 120);
+
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+
+        function showLove() {
+            document.getElementById("question").innerHTML =
+                "I knew it 😭💖<br><br>" +
+                "Don't worry Amma, everything will be alright! 💗<br><br>" +
+                "You are my strength, my inspiration and my world 🌸<br><br>" +
+                "I love you soooooooooo muchhhhh mudhu amma 💝";
+
+            const photoSection = document.getElementById("photos");
+
+            photoSection.innerHTML = `
+                <img src="image1.jpeg">
+                <img src="image2.jpeg">
+                <img src="image3.jpeg">
+                <img src="image4.jpeg">
+                <img src="image5.jpeg">
+                <img src="image6.jpeg">
+                <img src="image7.jpeg">
+                <img src="image8.jpeg">
+            `;
+
+            photoSection.style.display = "block";
+            photoSection.innerHTML += "<p>See how cute you are in these photos 😘😍💝 <br> Always a smile on your face amma , Tears on your face doesn't suit you a lot amma 🥺 <br> My cute penguin 💗 <br> My cute little Darling 💝 <br> My cute little kandamma ❤️ <br> My pasandida Aurat 🥰 <br> I love you soooooooo muchhhhh AMMA 💗😍🥰</p>";
+        }
+    </script>
+
+</body>
+</html>
